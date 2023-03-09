@@ -1,0 +1,321 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-bottom: 3px solid red;
+}
+
+header input {
+  width: 30%;
+  height: 30px;
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid red;
+  border-radius: 5%;
+  text-align: center;
+}
+
+header button {
+  width: 10%;
+  height: 30px;
+  background-color: #00c896;
+  margin-left: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, auto));
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+  background-color: wheat;
+  border: 1px solid black;
+  margin: 25px;
+}
+.element img {
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+.element h3 {
+  text-align: center;
+  margin: 10px;
+  color: purple;
+}
+.element h4 {
+  color: blueviolet;
+}
+footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  font-size: 1.75em;
+  color: #00c896;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  .element {
+    width: 320px;
+    height: 500px;
+    margin: 10px;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 95%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 80%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+  .element {
+    width: 320px;
+    height: 500px;
+    margin: 10px;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+  header {
+    flex-direction: column;
+  }
+  header input {
+    position: relative;
+    width: 90%;
+    height: 45px;
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+
+  header button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+
+    margin: 0.5rem;
+    border-radius: 0%;
+  }
+  .element {
+    width: 320px;
+    height: 500px;
+    margin: 10px;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#my {
+  background-color: #00c896;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2rem;
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+}
