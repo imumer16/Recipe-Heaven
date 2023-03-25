@@ -11,7 +11,7 @@ for (let index = 0; index < 12; index++) {
           html += `
 
                 <div class="row" data-id="${meal.idMeal}">
-                  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <div class="max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
                       <img class="rounded-t-lg" src="${meal.strMealThumb}" alt="${meal.idMeal}" />
                   </a>
@@ -60,7 +60,7 @@ let food = {
               html += `
 
               <div class="row" data-id="${meal.idMeal}">
-              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div class="max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
                   <img class="rounded-t-lg" src="${meal.strMealThumb}" alt="${meal.idMeal}" />
               </a>
