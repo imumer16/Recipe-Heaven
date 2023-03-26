@@ -1,7 +1,7 @@
 //To Get Random Recipe
 
 for (let index = 0; index < 12; index++) {
-  fetch(`https://www.themealdb.com/api/json/v1/1/random.php `)
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
@@ -29,15 +29,24 @@ for (let index = 0; index < 12; index++) {
               </div>
                 `;
         });
-        $("#meal").removeClass("notfound");
-      } else {
-        html = "Sorry, Can't find any Random Recipe!!";
-        $("#meal").addClass("notfound");
-      }
+        
+      } 
       $("#meal").append(html);
     })
     .catch((error) => {
-      alert("Failed in geting Random Recipe");
+      //custom alert
+      modal.innerHTML= `
+      <div class="modal-content">
+      <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+      <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      <span class="sr-only">Info</span>
+      <div>
+        <span class="font-medium">Danger alert!</span><br>Failed in geting Random Recipets From DataBase.<br>Check your internet connection or Reload Page.
+      </div>
+    </div>
+          </div>
+            `;
+            modal.style.display = "block";
     });
 }
 
@@ -46,7 +55,19 @@ let food = {
   get_ingredients: function () {
     var x = document.getElementById("default-search").value;
     if (x.length == 0) {
-      alert("Please enter a Some data");
+      modal.innerHTML= `
+      <div class="modal-content">
+      <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+      <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      <span class="sr-only">Info</span>
+      <div>
+        <span class="font-medium">Danger alert!</span> Please enter a ingredient and try submitting again.
+      </div>
+    </div>
+          </div>
+            `;
+            modal.style.display = "block";
+      // alert("Please enter a Some data");
       return;
     } else {
       // console.log(x);
@@ -80,13 +101,35 @@ let food = {
             });
             $("#meal").removeClass("notfound");
           } else {
-            html = "Sorry, Can't find any recipe!!";
-            $("#meal").addClass("notfound");
+            modal.innerHTML= `
+            <div class="modal-content">
+            <div class="flex p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+            <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            <span class="sr-only">Info</span>
+            <div>
+              <span class="font-medium">Warning alert!</span> Cannot find Recipe in DataBase.
+            </div>
+          </div>
+
+                </div>
+                  `;
+                  modal.style.display = "block";
           }
-          $("#meal").html(html);
+          
         })
         .catch((error) => {
-          alert("Can't find any recipe");
+          modal.innerHTML= `
+          <div class="modal-content">
+          <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+          <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Info</span>
+          <div>
+            <span class="font-medium">Danger alert!</span><br>Failed in geting Random Recipets From DataBase.<br>Check your internet connection or Reload Page.
+          </div>
+        </div>
+              </div>
+                `;
+                modal.style.display = "block";
         });
     }
   },
