@@ -12,7 +12,7 @@ Welcome to Recipe Heaven! This site is designed to provide you with a user-frien
 
 ## Demo
 
-Check out our live demo at [https://www.recipeheaven.com](https://www.recipeheaven.com) to explore the wide range of recipes available and experience the user-friendly interface firsthand.
+Check out our live demo at [https://recipeheavenbyumer.netlify.app]([https://www.recipeheaven.com](https://recipeheavenbyumer.netlify.app)) to explore the wide range of recipes available and experience the user-friendly interface firsthand.
 
 ## Installation
 
@@ -40,7 +40,7 @@ REACT_APP_MEALDB_API_KEY=your-api-key
 
 6. Start the development server:
 
-npm start
+npm dev
 
 
 7. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
