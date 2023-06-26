@@ -19,31 +19,32 @@ Check out our live demo at [https://recipeheavenbyumer.netlify.app]([https://www
 To run Recipe Heaven locally on your machine, follow these steps:
 
 1. Clone the repository:
-   
-git clone https://github.com/your-username/recipe-heaven.git
+   ```git
+      git clone https://github.com/imumer16/Recipe-Heaven.git
+   ```
 
 
 2. Change into the project's directory:
-
+   ```bash
+      cd recipe-heaven
+   ```
 
 3. Install the dependencies:
-
-npm install
-
+    ```npm
+      npm install
+    ```
 
 4. Obtain an API key from [MealDB](https://www.themealdb.com/api.php) by creating an account.
 
-5. Create a `.env` file in the root directory of the project and add the following:
-
-REACT_APP_MEALDB_API_KEY=your-api-key
 
 
-6. Start the development server:
+5. Start the development server:
+   ```npm
+      npm dev
+   ```
 
-npm dev
 
-
-7. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+6. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## Technologies Used
 
@@ -65,7 +66,7 @@ We welcome contributions to Recipe Heaven! To contribute, please follow these gu
 
 ## Feedback
 
-If you have any feedback, suggestions, or issues related to Recipe Heaven, please open an issue on the [GitHub repository](https://github.com/your-username/recipe-heaven/issues). We appreciate your input!
+If you have any feedback, suggestions, or issues related to Recipe Heaven, please open an issue on the [GitHub repository](https://github.com/imumer16/Recipe-Heaven/issues). We appreciate your input!
 
 ## License
 
