@@ -48,7 +48,7 @@ To run Recipe Heaven locally on your machine, follow these steps:
 
 ## Technologies Used
 
-- React
+- Tailwind
 - HTML
 - CSS
 - JavaScript
